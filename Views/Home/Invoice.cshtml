@@ -1,0 +1,33 @@
+@model IEnumerable<shoppp2.Models.Invoice>
+@{
+    ViewData["Title"] = "Hóa đơn";
+}
+
+<div class="container mt-4">
+    <h2 class="text-secondary mb-3">Danh Sách Hóa Đơn</h2>
+    <table class="table table-bordered table-striped shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Mã hóa đơn (Id)</th>
+                <th>Ngày tạo</th>
+                <th>Mã nhân viên</th>
+                <th>Tên khách hàng</th>
+                <th>SĐT khách hàng</th>
+                <th>Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@item.EmployeeId</td>
+                    <td class="fw-bold">@item.CustomerName</td>
+                    <td>@item.CustomerPhone</td>
+                    <td class="text-danger fw-bold">@item.TotalAmount.ToString("N0") VNĐ</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

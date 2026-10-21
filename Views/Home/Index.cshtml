@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<div class="text-center py-5">
+    <h1 class="display-4 fw-bold text-primary">Phan văn kiều</h1>
+    <p class="lead text-muted">@ViewBag.Message</p>
+    
+    <div class="mt-4">
+        <a asp-action="Category" class="btn btn-primary m-2 px-4">Danh Mục</a>
+        <a asp-action="Product" class="btn btn-success m-2 px-4">Sản Phẩm</a>
+        <a asp-action="Employee" class="btn btn-info m-2 px-4 text-white">Nhân Viên</a>
+        <a asp-action="Invoice" class="btn btn-warning m-2 px-4">Hóa Đơn</a>
+        <a asp-action="InvoiceDetail" class="btn btn-secondary m-2 px-4">Chi Tiết Hóa Đơn</a>
+    </div>
+</div>

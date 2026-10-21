@@ -1,0 +1,27 @@
+@model IEnumerable<shoppp2.Models.Category>
+@{
+    ViewData["Title"] = "Danh mục loại sản phẩm";
+}
+
+<div class="container mt-4">
+    <h2 class="text-secondary mb-3">Danh Mục Loại Sản Phẩm</h2>
+    <table class="table table-bordered table-striped shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Mã danh mục (Id)</th>
+                <th>Tên danh mục (Name)</th>
+                <th>Mô tả (Description)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td class="fw-bold">@item.Name</td>
+                    <td>@item.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

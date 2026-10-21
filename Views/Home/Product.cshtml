@@ -1,0 +1,44 @@
+@model IEnumerable<shoppp2.Models.Product>
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+}
+
+<div class="container mt-4">
+    <h2 class="text-secondary mb-3">Danh Sách Sản Phẩm Trong Kho</h2>
+    <table class="table table-bordered table-hover shadow-sm align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Tên sản phẩm</th>
+                <th>Mã danh mục</th>
+                <th>Đơn giá</th>
+                <th>Tồn kho</th>
+                <th>Tên file ảnh</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td class="fw-bold">@item.Name</td>
+                    <td>@item.CategoryId</td>
+                    <td>@item.Price.ToString("N0") VNĐ</td>
+                    <td>@item.StockQuantity</td>
+                    <td><code>@item.ImageFileName</code></td>
+                    <td>
+                        @if (item.IsActive)
+                        {
+                            <span class="badge bg-success">Hoạt động</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">Khóa</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

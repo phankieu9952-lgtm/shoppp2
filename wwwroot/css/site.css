@@ -1,0 +1,372 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background: #fff url("../images/vietnam-flag-background.svg") center / cover fixed no-repeat;
+}
+
+.shop-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin-right: 28px;
+  color: #172321;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.shop-brand:hover {
+  color: #172321;
+}
+
+.shop-brand-logo {
+  display: block;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.shop-brand-name {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  line-height: 1;
+}
+
+.shop-brand-word {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.shop-brand-number {
+  color: #ef7148;
+}
+
+.shop-brand-name small {
+  display: block;
+  color: #65716d;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.product-page {
+  --product-ink: #172321;
+  --product-muted: #65716d;
+  --product-accent: #ef7148;
+  --product-paper: #f1f5f1;
+  color: var(--product-ink);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 0 52px;
+}
+
+.product-eyebrow,
+.product-specs-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.product-eyebrow {
+  padding: 0 0 18px;
+  border-bottom: 1px solid #dce4de;
+}
+
+.product-stock {
+  color: var(--product-muted);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.product-stock span,
+.product-color-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #5d9871;
+}
+
+.product-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  align-items: center;
+  gap: clamp(32px, 7vw, 92px);
+  padding: 34px 0 58px;
+}
+
+.product-image-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+  aspect-ratio: 1.12 / 1;
+  background: var(--product-paper);
+}
+
+.product-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  object-fit: cover;
+}
+
+.product-edition,
+.product-image-index {
+  position: absolute;
+  z-index: 1;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+}
+
+.product-edition {
+  top: 18px;
+  left: 18px;
+  padding: 9px 12px;
+  background: #fff;
+}
+
+.product-image-index {
+  right: 18px;
+  bottom: 16px;
+  color: #fff;
+  text-shadow: 0 1px 8px #0008;
+}
+
+.product-image-index b {
+  margin-left: 8px;
+  color: #ff9a70;
+}
+
+.product-image-note {
+  margin: 12px 0 0;
+  color: var(--product-muted);
+  font-family: Georgia, 'Palatino Linotype', serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.product-category {
+  margin: 0 0 12px;
+  color: var(--product-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.product-copy h1 {
+  margin: 0;
+  font-family: Georgia, 'Palatino Linotype', serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 0.98;
+}
+
+.product-copy h1 span {
+  color: var(--product-accent);
+  font-style: italic;
+}
+
+.product-description {
+  max-width: 440px;
+  margin: 22px 0 26px;
+  color: var(--product-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.product-price-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  padding: 18px 0;
+  border-top: 1px solid #dce4de;
+  border-bottom: 1px solid #dce4de;
+}
+
+.product-price-line strong {
+  font-family: Georgia, 'Palatino Linotype', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.product-price-line small {
+  margin-left: 3px;
+  font-size: 1rem;
+}
+
+.product-price-line > span {
+  color: var(--product-muted);
+  font-size: 0.85rem;
+}
+
+.product-colors {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: var(--product-ink);
+  font-size: 0.9rem;
+}
+
+.product-color-dot {
+  width: 17px;
+  height: 17px;
+  margin-right: 9px;
+  border: 3px solid #fff;
+  outline: 1px solid #9aa6a0;
+  background: #202b29;
+}
+
+.product-color-separator {
+  padding: 0 4px;
+  color: #a4ada8;
+}
+
+.product-cta {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  background: var(--product-ink);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.product-cta:hover {
+  background: #34574c;
+  color: #fff;
+}
+
+.product-cta span {
+  color: #ff9a70;
+  font-size: 1.3rem;
+}
+
+.product-delivery {
+  margin: 12px 0 0;
+  color: var(--product-muted);
+  font-size: 0.78rem;
+}
+
+.product-specs {
+  padding: 24px 0 0;
+  border-top: 1px solid #dce4de;
+}
+
+.product-specs-heading {
+  color: var(--product-ink);
+}
+
+.product-specs-heading span:last-child {
+  color: var(--product-muted);
+  font-family: Georgia, 'Palatino Linotype', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.product-spec-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  padding-top: 25px;
+}
+
+.product-spec {
+  padding-top: 14px;
+  border-top: 2px solid var(--product-accent);
+}
+
+.product-spec-number {
+  color: var(--product-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.product-spec h2 {
+  margin: 10px 0 6px;
+  font-family: Georgia, 'Palatino Linotype', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.product-spec p {
+  max-width: 290px;
+  margin: 0;
+  color: var(--product-muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+  .product-page {
+    padding-top: 16px;
+  }
+
+  .product-showcase {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 24px 0 40px;
+  }
+
+  .product-image-frame,
+  .product-image-frame img {
+    min-height: 280px;
+  }
+
+  .product-copy h1 {
+    font-size: 3.25rem;
+  }
+
+  .product-spec-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .product-specs-heading {
+    align-items: flex-start;
+  }
+}
